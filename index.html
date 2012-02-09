@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/sc-player-minimal.css" type="text/css">
+    <link rel="stylesheet" href="./css/playlister.css" type="text/css">
+  </head>
+  <body>
+    <div id=nav>
+    <span class="header">
+      Soundcloud Playlister
+    </span>
+      <form action="#" id="soundcloud_search">
+        <input type="text" placeholder="Search for tracks" id="search_string" name="search_string" />
+        <button type="submit" id="search_button">Search</button>
+      </form>
+    </div>
+
+    <div id="home">
+      <ul id="playlists">
+      </ul>
+      <form action="#" id="create_playlist" style="display:none">
+        <input type="text" name="playlistTitle" placeholder="Playlist Title" />
+        <button type="submit" id="create_playlist_button"> Create Playlist</button><br /><br />
+        <textarea rows="2" cols="50" style="height:60px;" name="playlistDescription" placeholder="Description" ></textarea>
+      </form>
+    </div>
+    <div id="search">
+    <h2> Search Results</h2>
+      <ul id="search_results">
+      </ul>
+      <div id="add_track_form" style="display:none;">
+        <form id="add_track" action="#">
+          <select id="playlist_select"></select><br />
+          <input type="text" name="tag_list" id="tag_list" placeholder="Add tags separated by commmas" />
+          <button type="submit" id="add_track_submit">Add Track</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/JavaScript"></script>
+    <script src="http://connect.soundcloud.com/sdk.js" type="text/JavaScript"></script>
+    <script type="text/javascript" src="./js/soundcloud.player.api.js"></script>
+    <script type="text/javascript" src="./js/sc-player.js"></script>
+    <script type="text/JavaScript" src="./js/sc-playlister.js"</script>
+    </script>
+  </body>
+</html>
