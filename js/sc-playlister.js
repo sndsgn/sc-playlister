@@ -14,10 +14,6 @@ $(document).ready(function() {
     
     //PREPARE FRONT END
     showHomePage();
-    $("a#home_nav").click(function() {
-      $("#add_track_form").hide();
-      showHomePage();
-    });
 
     //HANDLE SEARCH FORM SUBMISSION
     $('form#soundcloud_search').submit(function(e) {
@@ -107,7 +103,7 @@ $(document).ready(function() {
     //POPULATE THE OPTIONS FOR PLAYLIST SELECT
     var optionList = '<option value="new">Select a Playlist</option>';
     var i = 0;
-    var listLength = localStorage.length-1;
+    var listLength = localStorage.length;
     
     //PULL PLAYSLIST TITLES FROM LOCALSTORAGE
     for (i = 0; i < listLength; i++) {
@@ -126,7 +122,7 @@ $(document).ready(function() {
   function displayPlaylists() {
     var playlistList = "";
     var i = 0;
-    var listLength = localStorage.length-1;
+    var listLength = localStorage.length;
     
     //LOOP THROUGH PLAYLISTS
     for (i = 0; i < listLength; i++) {
