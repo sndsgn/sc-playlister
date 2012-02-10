@@ -145,10 +145,10 @@ $(document).ready(function() {
         $.each(tags, function(index, value) {
           tags[index] = '<span class="tag">' + value.replace('tags%5B%5D=','').replace('+',' ') + '</span>'; //MAKE THE TAG LIST (NEED BETTER URI DECODING)
         });
-        tracklist += '<div class="player"><a href="' + url[0] + '" class="sc-player">' + url[0] + '</a>' + tags.join('  ') + '</div>';//MAKE THE TRACK LIST
+        tracklist += '<div class="player"><a href="' + url[0] + '" class="sc-player">' + url[0] + '</a><p>' + tags.join('  ') + '</p></div>';//MAKE THE TRACK LIST
       });
         if (tracklist == '') {
-          tracklist = '<div class="player">No tracks yet. Search for tracks and add them to this playlist.</div>';
+          tracklist = '<div class="player"><p>No tracks yet. Search for tracks and add them to this playlist.</p></div>';
         }
       playlistList += '<li><div class="playlist_info"><span class="playlist_title">' + playlistTitle + '</span>&nbsp;<span class="delete" name="' + itemKey + '">&times;</span><br />' + '<span class="playlistDesc">' + playlistDescription + '</span></div>' + tracklist + '</li>'; 
     }

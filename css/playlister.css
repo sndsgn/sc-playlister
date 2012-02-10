@@ -15,9 +15,10 @@ span.header {
   font-size: 30px;
   margin-top: 30px;
   padding-left: 10px;
-position:relative;
-top: 5px;
+  position:relative;
+  top: 5px;
 }
+
 div#nav {
   background-color: #000;
   padding: 0px;
@@ -37,6 +38,7 @@ div#nav a {
   position: absolute; 
   top:10;
 }
+
 a:link {text-decoration: none}
 a:visited {text-decoration: none}
 a:active {text-decoration: none}
@@ -55,6 +57,8 @@ input, textarea {
 
 form#soundcloud_search {
   float:right; 
+  position: relative;
+  top: 0px;
 }
 
 input#search_string { 
@@ -67,7 +71,6 @@ button#search_button{
   height: 28px;
   margin-top: 9px;
   margin-left: -6px;
-
 }
 
 fieldset {
@@ -134,7 +137,7 @@ span.tag {
 }
 
 div.playlist_info {
-padding-left: 10px;
+padding-left: 0px;
 padding-bottom: 5px;
 margin: 0;
 background-color: #CCCCCC;
@@ -143,10 +146,14 @@ width: 100%;
 
 div.player {
   border-bottom: 1px solid #000;
-padding-left: 10px;
+padding-left: 0px;
 padding-bottom: 5px;
   width: 100%;
   margin: 0;
+}
+
+div.player p {
+  padding-left: 10px;
 }
 
 div.add_playlist {
@@ -154,11 +161,12 @@ div.add_playlist {
   font-weight: bold;
   background-color: #CCCCCC;
   width: 100%;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-bottom: 5px;
 }
 div.add_playlist a {
   color: #000000;
+  padding-left: 10px;
 } 
 
 div.sc-player {
@@ -177,3 +185,6 @@ select#playlist_select {
   font-size:28px; 
 }
 
+.playlist_title {
+  padding-left: 10px;
+}
